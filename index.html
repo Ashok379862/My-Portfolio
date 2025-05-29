@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashok kumar reddy| Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Raleway', sans-serif;
+    }
+    body {
+      background: linear-gradient(to right, #0f0f0f, #1a1a2e);
+      color: #f0f0f0;
+      line-height: 1.6;
+      padding: 0 20px;
+    }
+    header {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 1px solid #444;
+      animation: fadeInDown 1s ease;
+    }
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      color: #00f7ff;
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #ccc;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #00f7ff;
+    }
+    .section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(8px);
+      border-radius: 10px;
+      box-shadow: 0 0 15px #00000033;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+      animation-delay: 0.3s;
+    }
+    .intro {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .intro img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      transform: scale(0);
+      animation: scaleIn 0.5s ease forwards;
+      animation-delay: 0.3s;
+    }
+    .intro h2 {
+      font-size: 2em;
+      background: linear-gradient(to right, #ff00c8, #00f7ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: typewriter 3s steps(30) 1 normal both;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .button {
+      display: inline-block;
+      background: linear-gradient(to right, #00f7ff, #ff00c8);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      margin-top: 10px;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+    .button:hover {
+      transform: translateY(-3px);
+    }
+    .projects, .skills-list, .certificates {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+     .internships{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(6px);
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s ease,box-shadow 0.3s ease;
+      animation: fadeInUp 1s ease forwards;
+       box-shadow: 0 0 20px rgb(255, 1, 191);
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      background-color: #ff06c9;
+      box-shadow: 0 0 100px #0500ff;
+    }
+    
+    .card img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+    .skills-list span {
+      display: inline-block;
+      background: rgba(164, 5, 179, 0.781);
+      padding: 8px 12px;
+      border-radius: 8px;
+      margin: 7px;
+      transform: scale(0);
+      animation: scaleIn 0.5s ease forwards;
+      animation-delay: calc(0.1s * var(--i));
+    }
+    .contact a {
+      margin-right: 10px;
+      color: #00f7ff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .contact a:hover {
+      color: #ffffff;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes scaleIn {
+      to { transform: scale(1); opacity: 1; }
+    }
+    @keyframes typewriter {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ASHOK KUMAR REDDY</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="section intro">
+    <div>
+      <h2>Hi, I’m Ashok kumar reddy</h2>
+      <p>Data Scientist & Frontend Developer</p>
+      <p>with experience in data science and frontend development,I deliver intelligent,user-focused web solutions.</p>
+      <a class="button" href="My resume (1).pdf">View Resume</a>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>Enthusiastic and analytical Data Science graduate with a solid foundation in Python, pandas, NumPy, SQL, and machine learning techniques. Experienced in cleaning, analyzing, and visualizing data to drive insights and support decision-making. Built academic and personal projects involving data modeling, predictive analysis, and dashboard creation using tools like Matplotlib and Seaborn. Additionally, familiar with basic frontend technologies such as HTML, CSS, and JavaScript for creating simple, responsive user interfaces. Eager to apply data-driven solutions in real-world applications and grow within a collaborative, tech-driven team..</p>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <img src="Web_20250518_114738_0000.png" alt="web trainer">
+        <h3>web trainer</h3>
+        <p>This is  a web tariner website i have build it by using HTML,CSS,JavaScript.Here the info will be about how to  build ypur body. </p>
+      </div>
+      <div class="card">
+        <img src="IMG_20250524_170859.jpg" alt="my portfolio">
+        <h3>my portfolio</h3>
+        <p>This is my personal portfolio website i have build it by using HTML,css. To showcase all my skills,projects,certificates</p>
+      </div>
+      <div class="card">
+        <img src="file_000000008b7c62308f5d4472b915387d.png" alt="loan-prediction">
+        <h3>Loan prediction</h3>
+        <p>This is the loan-prediction project ,i have made this using PYTHON libraries and MACHINE LEARNING classification model</p>
+      </div>
+      <div class="card">
+        <img src="Screenshot_2025_0528_184128.jpg" alt="memory card game">
+        <h3>Memory card game</h3>
+        <p>i have created a memory card game it is game of identifying and pairing their matches with 50 Levels and three different modes.</p>
+      </div>
+    </div>
+  </section>
+
+ <section id="internships" class="section">
+  <h2>internships</h2>
+    <div class="internships">
+      <div class="card">
+        <img src="Screenshot_2024_0725_092511.jpg" alt="Python certificate">
+        <h3>Data Science </h3>
+        <p>I has successfully completed 4 weeks virtual internship program in Data Science with wonderful remarks at RD INFRO TECHNOLOGY from 16-05-2024 to 15-06-2024.</p>
+      </div>
+     
+    </section>     
+      
+  <section id="certificates" class="section">
+    <h2>certifications</h2>
+    <div class="certificates">
+      <div class="card">
+        <img src="Screenshot_2025_0510_184146.jpg" alt="Python certificate">
+        <h3>Python </h3>
+        <p>I have successfully completed and received a passing grade in Python 101 for data science provided by IBM Skills Network.</p>
+      </div>
+       <div class="card">
+        <img src="Screenshot_2025_0510_184132.jpg" alt="SQL">
+        <h3>SQL</h3>
+        <p>I have successfully completed and received a passing grade in SQL and Relational Databases 101 provided by IBM Skills Network.</p>
+      </div>
+      <div class="card">
+        <img src="Screenshot_2025_0428_181035.jpg" alt="Tableau">
+        <h3>Data vizualization</h3>
+        <p>I have successfully completed Basic of Data Vizualization with Tableau provide by UniAthena in parternership with Cambrdge international qualifications,UK.</p>
+      </div>
+      <div class="card">
+        <img src="Screenshot_2025_0510_184012.jpg" alt="Prompt engineering">
+        <h3>Prompt Engineering</h3>
+        <p>I have successfully completed and received a passing grade in Prompt Engineering for Everyone provided by IBM Skills Network.</p>
+      </div>
+      <div class="card">
+        <img src="Screenshot_2025_0526_152637.jpg" alt="Data visualization with Python">
+        <h3>Data visualization with Python</h3>
+        <p>I have successfully completed and received a passing grade in Data visualization with Python provided by IBM Skills Network.</p>
+      </div>
+       <div class="card">
+        <img src="Screenshot_2025_0528_183242.jpg" alt="powerBI">
+        <h3>PowerBI</h3>
+        <p>I have successfully completed powerBI workshop,i can create AI-powered interactive dashboards in powerBI under 30 Mins..</p>
+      </div>
+    </div>
+    </section>     
+
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <span style="--i:1">Python(NumPy,pandas)</span>
+      <span style="--i:2">Frontend(html,css,js)</span>
+      <span style="--i:3">Machine Learning</span>
+      <span style="--i:4">Generative AI</span>
+      <span style="--i:5">Creative Thinking</span>
+      <span style="--i:6">Data vizualization</span>
+      <span style="--i:7">SQL</span>
+      <span style="--i:8">Deep learning</span>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Feel free to reach out via email or connect on social media.</p>
+    <div class="contact">
+      <a href="mailto:ashok.lakkireddy1235@gmail.com">Email</a>
+      <a href="https://github.com/Ashok379862">GitHub</a>
+      <a href="https://www.linkedin.com/in/ashok-kumar-reddy-25780b2a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">linkedin</a>
+    </div>
+  </section>
+</body>
+</html>
